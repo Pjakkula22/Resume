@@ -1,69 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>My Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Style header */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #007bff;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .underline {
+            border-bottom: 1px solid #0000004d;
+        }
+
+        /* Flex container for two columns */
+        .container {
+            display: flex;
+            max-width: 1000px;
+            background-color: white;
+           /* border-radius: 8px;*/
+            overflow: hidden;
+            border-top: 1px solid black;
+            /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+        }
+
+        /* Left and right column styling */
+        .left-column {
+            width: 35%;
+            background-color: #e3f2fd; /* Light blue color */
+            padding: 20px;
+            color: #333;
+        }
+
+        .right-column {
+            width: 65%;
+            background-color: white;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Section titles */
+        .left-column h2, .right-column h2 {
+            color: #007bff;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        /* Contact and Skills formatting */
+        .left-column ul, .right-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .left-column li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        /* Right column details */
+        .right-column strong {
+            color: #007bff;
+        }
+
+        /* Education and Experience sections */
+        .right-column p {
+            margin: 5px 0;
+        }
+
+        /* List items in experience section */
+        .right-column ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        #experience ul {
+           list-style-type: disc; 
+           padding-left: 20px;    
+        }
+
+        #experience li {
+        margin-bottom: 8px;    
+        }
+
+    </style>
 </head>
 <body>
     <header>
         <h1>Pradhyu</h1>
-        <p>Full stack Developer</p>
+        <p>Full Stack Developer</p>
     </header>
-    <section id="contact">
-        <h2>Contact Information</h2>
-            <li><b>Email:</b> pjakkula@atu.edu</li>
-            <li><b>Phone:</b> (903) 503-9603</li>
-    </section>
-    <section id="Education">
-        <h2>Education Details</h2>
-        <p><b>Master of science</b></p>
-        <p>2022-2023<p>
-        <P>Masters in Information Technology</P>
-        <p>Arkansas Tech University</p>
-        <p><b>Bachelor of Technology</b></p>
-        <p>2017-2021<p>
-        <P>Electronics and communication Engineering</P>
-        <p>JNTUH</p>
-    </section>
-    <section id="Skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><b>Coding languages:</b> Proficiency in front-end languages like HTML, CSS, and JavaScript, and back-end languages like Python, Java. </li>
-            <li><b>Frameworks and libraries:</b> Knowledge of frameworks like React,  and Angular, which can simplify and speed up development.</li>
-            <li><b>Database management systems:</b> Understanding of database management systems like MySQL, and PostgreSQL. </li>
-            <li><b>Version control:</b> Ability to use a version control system like Git to track and control code changes.</li>
-            <li><b>Server management:</b> Basic understanding of server management.</li>
-        </ul>
-    </section>
-    <section id="languages">
-        <h2>Languages</h2>
-        <ul>
-            <li>English</li>
-            <li>Hindi</li>
-            <li>Telugu</li>
-        </ul>
-    </section>
 
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <strong>Software Engineer</strong> - NRG Energy (July 2023 -Present)
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <section class="contact">
+                <h2 class="underline">Contact </h2>
                 <ul>
-                    <li>Built responsive web apps using Java, HTML, CSS, JavaScript.</li>
-                    <li>Developed REST APIs and Spring Boot backends.</li>
-                    <li>Used PostgreSQL and DAO pattern for data access.</li>
-                    <li>Participated in Agile sprints and CI/CD pipelines.</li>
-                    <li>Applied core Java concepts for performance and stability.</li>
+                    <li>📧 pjakkula@atu.edu</li>
+                    <li>📞 (903) 503-9603</li>
                 </ul>
-           <strong>Software Engineer Intern</strong> - MX-Techies (Jan 2023-May 2023)
+            </section>
+
+            <section id="education">
+                <h2 class="underline">Education</h2>
+                <p><strong>2022 - 2023</strong><br>Master's in Information Technology<br>Arkansas Tech University</p>
+                <p><strong>2017 - 2021</strong><br>Bachelor's in Electronics and Communication Engineering<br>JNTUH</p>
+            </section>
+
+            <section id="skills">
+                <h2 class="underline">Skills</h2>
                 <ul>
-                    <li>Developed web and mobile apps using Mendix low-code platform.</li>
-                    <li>Customized domain models and entity relationships for efficient data handling.</li>
-                    <li>Automated business processes using microflows and nanoflows.</li>
-                    <li>Integrated REST APIs and SAML-based SSO for secure, seamless connectivity.</li>
-                    <li>Built user-friendly interfaces and custom reports using Mendix tools.</li>
+                    <li>Web Development</li>
+                    <li>Project Management</li>
+                    <li>Database Management</li>
+                    <li>Version Control (Git)</li>
+                    <li>Server Management</li>
                 </ul>
-    </section>
-    
+            </section>
+
+            <section id="languages">
+                <h2 class="underline">Languages</h2>
+                <ul>
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>Telugu</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <section id="profile-summary">
+                <h2 class="underline">Profile Summary</h2>
+                <p>Full Stack Developer with a passion for creating dynamic and responsive web applications. Proficient in both front-end and back-end technologies including JavaScript, React, Node.js, Express, and MongoDB. Adept at building scalable, efficient, and user-friendly solutions.</p>
+            </section>
+
+            <section id="experience">
+                <h2 class="underline">Work Experience</h2>
+                <p><strong>Software Engineer</strong> - XXXX Company<br><em>July 2023 - Present</em></p>
+                <ul>
+                    <li>Built responsive web applications using Java, HTML, CSS, and JavaScript.</li>
+                    <li>Developed REST APIs and back-end systems with Spring Boot.</li>
+                    <li>Leveraged PostgreSQL for data management and applied DAO patterns.</li>
+                    <li>Participated in Agile sprints and CI/CD pipeline integration.</li>
+                </ul>
+
+                <p><strong>Software Engineer Intern</strong> - XXX Organisation<br><em>Jan 2023 - May 2023</em></p>
+                <ul>
+                    <li>Developed web and mobile applications using the Mendix low-code platform.</li>
+                    <li>Customized domain models for efficient data handling.</li>
+                    <li>Automated processes with microflows and nanoflows.</li>
+                    <li>Integrated REST APIs and SAML-based SSO for secure connectivity.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
