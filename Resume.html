@@ -173,7 +173,6 @@
                 <h2 class="underline">Skills</h2>
                 <ul>
                     <li>Web Development</li>
-                    <li>Project Management</li>
                     <li>Database Management</li>
                     <li>Version Control (Git)</li>
                     <li>Server Management</li>
@@ -194,6 +193,16 @@
             <form action="#">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" max="" required>
+
+                <script>
+                // Calculate the maximum date for minimum age of 20 years
+                const today = new Date();
+                const maxDate = new Date(today.getFullYear() - 20, today.getMonth(), today.getDate());
+                document.getElementById('dob').max = maxDate.toISOString().split('T')[0];
+                </script>   
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -236,5 +245,9 @@
             </section>
         </div>
     </div>
+    /* What would happen when we provide different names for the checkbox group?
+    If we provide a different name for the checkbox group it will be considered as seperate group and each checkbox can be selected seperately.
+    and if a same name value is given, all checkboxes selected are grouped under the same field in the form data, allowing to gather multiple selections in a single category.
+    */
 </body>
 </html>
