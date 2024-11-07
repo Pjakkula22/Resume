@@ -3,6 +3,12 @@
 <head>
     <title>Tables</title>
     <style>
+       body {
+        margin: 3%;
+        border: solid 1px;
+        padding: 15px;
+       }
+
         /* Style for column width */
         table {
             width: 25%;
@@ -66,6 +72,7 @@
     </style>
 </head>
 <body>
+
     <p><strong>1) How to add additional columns? How to add additional rows? How to span columns?</strong><br></p>
     <p>
         To add columns in HTML tables, we use additional `th` tags in the header row and corresponding `td` tags for each row. <br>
@@ -90,7 +97,7 @@
             <td colspan="2">Total Employees</td> <!-- Cell spans two columns -->
             <td>1</td>
         </tr>
-    </table>
+    </table><br>
 
     <!-- Adding new rows and spanning columns for the remaining questions -->
 
@@ -105,9 +112,9 @@
         }<br>
         th.gender {<br>
             width: 20%;<br>
-        }<br>
+        }
         </p>
-    </p>
+    </p><br>
 
     <p><strong>3) How to merge two rows into a single data cell?</strong></p>
     <p>
@@ -129,17 +136,17 @@
             <td>29</td>
             <td>Female</td>
         </tr>
-    </table>
+    </table><br>
 
     <p><strong>4) What is the purpose of align property in table cells?</strong></p>
     <p>
         The `align` attribute specifies the horizontal alignment of content within a cell (`left`, `center`, or `right`), while `valign` specifies vertical alignment. Modern HTML uses CSS (`text-align` and `vertical-align`).
-    </p>
+    </p><br>
 
     <p><strong>5) Is cellpadding a valid property?</strong></p>
     <p>
         `cellpadding` is outdated in HTML5, but still works to control spacing within cells. CSS (`padding` within `td` or `th`) is now preferred.
-    </p>
+    </p><br>
 
     <p><strong>6) How to expand a cell to two rows and three columns?</strong></p>
     <p>
@@ -156,21 +163,20 @@
             <td colspan="3" rowspan="2">Expanded Cell</td> <!-- Expanding cell across 2 rows and 3 columns -->
         </tr>
         <tr></tr>
-    </table>
+    </table><br>
 
     <p><strong>7) What happens if you use the border attribute on a `table` element in modern HTML?</strong></p>
     <p>
         The `border` attribute is still valid in modern HTML for setting a simple border on a table. However, it’s generally recommended to use CSS (`border`) for more control.
-    </p>
+    </p><br>
 
     <p><strong>8) What attribute is used to set the alignment of text within a table cell? Both vertically and horizontally</strong></p>
     <p>
         Use the `align` attribute for horizontal alignment and `valign` for vertical alignment in older HTML. In modern HTML, use CSS properties (`text-align` and `vertical-align`).
-    </p>
+    </p><br>
 
     <p><strong>9) Build a table with alternating row colors</strong></p>
-    <p><strong>9) Styled Table</strong></p>
-    <h3>9. Styled product table</h3>
+    <h3> Styled product table</h3>
     <table class="product-table">
         <!-- Main headers row -->
         <tr>
