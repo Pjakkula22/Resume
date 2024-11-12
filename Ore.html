@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orientation Change Example</title>
+<style>
+  /* Basic styling */
+  body {
+    margin: 10;
+    padding: 10;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    width: 90%;
+    max-width: 800px;
+    gap: 20px;
+  }
+
+  .box {
+    flex: 1;
+    padding: 20px;
+    background-color: skyblue;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  /* Default layout for portrait mode */
+  .container {
+    flex-direction: column;
+  }
+
+  /* Layout for landscape mode */
+  @media (orientation: landscape) {
+    .container {
+      flex-direction: row;
+    }
+  }
+</style>
+</head>
+<body>
+    <h1 strong>Full Stack Training</h1>
+  <div class="container">
+    <div class="box">HTML</div>
+    <div class="box">CSS</div>
+    <div class="box">JavaScript</div>
+  </div>
+</body>
+</html>

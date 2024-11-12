@@ -1,0 +1,29 @@
+.gallery {
+    text-align: center; /* Optional: center aligns content */
+  }
+  
+  .gallery img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Adjust image widths at different screen sizes */
+  @media (max-width: 480px) {
+    .gallery img {
+      width: 100%; /* Single column */
+    }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    .gallery img {
+      width: 48%; /* Two columns with small gap */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .gallery img {
+      width: 23%; /* Four columns with small gap */
+    }
+  }
+  

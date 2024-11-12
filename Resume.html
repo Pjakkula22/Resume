@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widh=device-width, initial-scale=1.0">
     <title>My Resume</title>
+    </head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Pradhyu</h1>
+        <p>Full Stack Developer</p>
+    </header>
     <style>
-        /* General styling */
-        body {
+                /* General styling */
+                body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
@@ -33,16 +42,23 @@
         .underline {
             border-bottom: 1px solid #0000004d;
         }
+        .container {
+         max-width: 1000px;
+         margin: 0 auto;
+         padding: 20px;
+         background-color: white;
+         overflow: hidden;
+         border-top: 1px solid black;     
+         
+}
 
         /* Flex container for two columns */
-        .container {
+        .content {
             display: flex;
-            max-width: 1000px;
-            background-color: white;
-           /* border-radius: 8px;*/
+            flex-direction: column;
             overflow: hidden;
             border-top: 1px solid black;
-            /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
         /* Left and right column styling */
@@ -139,20 +155,38 @@
             cursor: pointer;
             font-size: 16px;
         }
-
         #contact-form .submit-btn:hover {
             background-color: #45a049;
         }
+        /*Responsive layout*/
+        @media (min-width: 768px) {
+            .content {
+                flex-direction: row; /* Side by side layout for wider screens */
+            }
+            .left-column {
+                width: 35%;
+            }
+            .right-column {
+                width: 65%;
+            }
+        }
+        @media (orientation: landscape) and (max-width: 768px) {
+        .content {
+           flex-direction: row; /* Horizontal layout in landscape mode on smaller screens */
+       }
+       }
+
+        @media (orientation: portrait) and (max-width: 768px) {
+        .content {
+            flex-direction: column; /* Vertical layout in portrait mode on smaller screens */
+        }
+
+        }
+
 
     </style>
-</head>
-<body>
-    <header>
-        <h1>Pradhyu</h1>
-        <p>Full Stack Developer</p>
-    </header>
-
-    <div class="container">
+    
+    <div class="content">
         <!-- Left Column -->
         <div class="left-column">
             <section class="contact">
@@ -245,9 +279,6 @@
             </section>
         </div>
     </div>
-    /* What would happen when we provide different names for the checkbox group?
-    If we provide a different name for the checkbox group it will be considered as seperate group and each checkbox can be selected seperately.
-    and if a same name value is given, all checkboxes selected are grouped under the same field in the form data, allowing to gather multiple selections in a single category.
-    */
+ </div>
 </body>
 </html>
