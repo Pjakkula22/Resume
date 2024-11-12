@@ -63,14 +63,14 @@
 
         /* Left and right column styling */
         .left-column {
-            width: 35%;
+            /*width: 35%;*/
             background-color: #e3f2fd; /* Light blue color */
             padding: 20px;
             color: #333;
         }
 
         .right-column {
-            width: 65%;
+           /* width: 65%;*/
             background-color: white;
             padding: 20px;
             color: #333;
@@ -172,13 +172,15 @@
         }
         @media (orientation: landscape) and (max-width: 768px) {
         .content {
-           flex-direction: row; /* Horizontal layout in landscape mode on smaller screens */
+           flex-direction: row;
+           width: auto; /* Horizontal layout in landscape mode on smaller screens */
        }
        }
 
         @media (orientation: portrait) and (max-width: 768px) {
         .content {
-            flex-direction: column; /* Vertical layout in portrait mode on smaller screens */
+            flex-direction: column; 
+            width: auto;/* Vertical layout in portrait mode on smaller screens */
         }
 
         }
@@ -242,7 +244,7 @@
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
                 <label for="phone">Phone:</label>
-                <input type="phone" id="phone" placeholder="Enter your phone" maxlength="10" pattern="[0-9]{10}" required>>
+                <input type="phone" id="phone" placeholder="Enter your phone" maxlength="10" pattern="[0-9]{10}" required>
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
